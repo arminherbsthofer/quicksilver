@@ -42,13 +42,17 @@ class RSITrader(TradingInterface):
         self.history: contains complete history, same structure as tohlcv
                       e.g. to get last 10 close values of BTC self.history['BTC']['Close'][-10:]
 
-        self.open_position(tohlcv, symbol, quantity, action, stop_loss, take_profit): opens position
+        self.open_position(tohlcv, symbol, quantity, action, stop_loss, take_profit): opens position 
+                      if no stop loss or take profit is given, you have to close the position manually 
+                      according to your algorithm logic
 
         self.close_position(position): closes position
 
         self.open_positions: list that contains open positions
 
         self.cash: remaining cash of account
+
+        for more options consult the TradingInterface source code
         '''
         
         indicator = Indicator()
@@ -79,7 +83,6 @@ Then you can run this algorithm in the trading loop like so:
 ```python
 
 import pandas as pd
-import matplotlib.pyplot as plt
 
 from quicksilver.visualization.trading_visualizer import TradingVisualizer
 
@@ -121,10 +124,6 @@ You can also track custom quantities with the record function. Above we also imp
 ## Contributing
 
 Contributions and testing are very welcome.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
 
 ## Authors
 
