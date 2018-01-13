@@ -1,7 +1,7 @@
 # Quicksilver
 
 Quicksilver is a library for backtesting and live trading. It is easily extendable and allows for a seemless transition between backtesting and live trading.
-It let's you focus on algorithm development and eliminates the risk of accidentally feeding future data into your models.
+It lets you focus on algorithm development and eliminates the risk of accidentally feeding future data into your models.
 
 ### Prerequisites
 
